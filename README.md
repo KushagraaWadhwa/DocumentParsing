@@ -106,21 +106,31 @@ Constraints:- Extracting the exact order of the document, Maintaining the struct
 #Dataset
 My current experimentation included three major policy documents of the organisation namely:-
 
--Internal Mobility Guidelines ( policy1.pdf ): 2pages, 84kb 
--Employee Performance Improvement Policy ( policy2.pdf ): 4pages, 273kb 
--Employee Handbook ( handbook.pdf ): 75pages,981kb 
+- Internal Mobility Guidelines ( policy1.pdf ): 2pages, 84kb 
+- Employee Performance Improvement Policy ( policy2.pdf ): 4pages, 273kb 
+- Employee Handbook ( handbook.pdf ): 75pages,981kb 
+
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 -<img width="543" alt="Screenshot 2024-08-07 at 10 35 07 AM" src="https://github.com/user-attachments/assets/122e6f3d-a661-4f7b-934f-fcab97ab39be"> 
 -<img width="541" alt="Screenshot 2024-08-07 at 10 35 30 AM" src="https://github.com/user-attachments/assets/0f4b8035-0186-4456-aa57-bd9a247d5e23">
 -<img width="540" alt="Screenshot 2024-08-07 at 10 34 50 AM" src="https://github.com/user-attachments/assets/1f66a6a8-4a84-4d05-8d3b-abcd9d04cab4">
+
 **The above images are an output to a streamlit dashboard I built to analyse the pdf documents.
 
 #Workflow followed
 #Summary
+The project aimed to implement a document parser in Python using pre-trained NLP models and libraries to convert unstructured internal policy documents into a structured format, extracting text, images, and tables while maintaining their original order. The chosen parser, integrating PyMuPDF and Camelot, was selected for its ability to provide image metadata, extract images, and efficiently read text and tables in the exact order they appear in the documents.Amongst the text parsing libraries PyMUPDF is the fastest and best amongst its competitors, LlamaParser has quite a lot exploraton but is not allowed to be used for company's internal documents, the best lbrary for parsing turned out to be Camelot; which can provide tables in three formats:- Markdown, CSV, JSON. The research phase evaluated various libraries, ultimately discarding some due to poor performance and not being able to help us achieve the results. The final solution was tested on three major policy documents, achieving the required document coverage rate of over 90%. A Streamlit dashboard was also developed to visualize the pdf documents about the corpus count, pages count, images count, tables count etc.
 
 #Limitations
+- Multillingual Parsing Capability of the parser
+- Duplication of the table content(May or may not affect the further usage of the documentation)
+  
 #Next Steps
+- Integrating OCR to read the image content along with the display of image metadata
+- Adding Multillingual Capability to the parser
+- Remove the duplicate parsing of tables
+- Tables in json format
 
 
 
