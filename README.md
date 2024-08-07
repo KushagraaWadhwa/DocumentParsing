@@ -12,7 +12,8 @@ It consists of two evaluation metrics:-
 
 [Difflib Documentation](https://docs.python.org/3/library/difflib.html)
 
-**~Sentence BERT Similarity**(Checks for the overall semantic interpretation of dataset)-Hugging Face PreTrained model(''all-MiniLM-L6-v2') [Sentence-BertDocumentation](https://sbert.net/docs/sentence_transformer/usage/semantic_textual_similarity.html)
+**~Sentence BERT Similarity**(Checks for the overall semantic interpretation of dataset)-Hugging Face PreTrained model(''all-MiniLM-L6-v2')        
+[Sentence-BertDocumentation](https://sbert.net/docs/sentence_transformer/usage/semantic_textual_similarity.html)
  
 *--> The first sheet contains the coverage comparison between Raw Truth and Ground Truth of the various HR documents*
  
