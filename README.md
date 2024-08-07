@@ -153,12 +153,12 @@ My current experimentation included three major policy documents of the organisa
 
 ```mermaid
 graph TD;
-    A[Actor: Source Documents] -->|Various Libraries (Raw Text obtained)| B[Q/A Pair Generation];
-    A -->|Ground Truth Text| B;
-    A -->|Libraries used| B;
-    B --> C[Native QA];
-    B --> D[T5 QA];
-    B --> E[GPT-4];
+    A[Actor: Source Documents] --> B[Various Libraries (Raw Text obtained)];
+    A --> C[Ground Truth Text];
+    B --> D[Q/A Pair Generation];
+    D --> E[Native QA];
+    D --> F[T5 QA];
+    D --> G[GPT-4];
     
     subgraph Libraries Used
         B1[pypdf2]
