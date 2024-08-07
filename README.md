@@ -5,10 +5,9 @@
 **Purpose:-** Fine-tuning dataset and Department level Benchmark dataset preparation.
 
 **Acceptance Criteria:-** The Acceptance criteria of the assigned task was having a document coverage greater than 90 percent.
-
 It consists of two evaluation metrics:-
-**~Difflib Similarity**( Check for word overlap, longest occurring continuous sequence of words)-Python inbuilt library
-**~Sentence BERT Similarity**( Checks for the overall semantic interpretation of dataset)-Hugging Face PreTrained model(''all-MiniLM-L6-v2')
+**~Difflib Similarity**( Check for word overlap, longest occurring continuous sequence of words)-Python inbuilt library [Difflib Documentation](https://docs.python.org/3/library/difflib.html)
+**~Sentence BERT Similarity**( Checks for the overall semantic interpretation of dataset)-Hugging Face PreTrained model(''all-MiniLM-L6-v2') [Sentence-BertDocumentation](https://sbert.net/docs/sentence_transformer/usage/semantic_textual_similarity.html)
  
 *--> The first sheet contains the coverage comparison between Raw Truth and Ground Truth of the various HR documents*
  
