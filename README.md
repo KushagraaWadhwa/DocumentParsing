@@ -18,6 +18,7 @@ Research about Libraries,Packages and Frameworks used
 **Cons:**
 - **Performance:** May not be as fast as some other libraries that use C extensions.
 - **Complexity:** Advanced operations can be complex to implement.
+- No support for table formats
 
 **Documentation:** [PyPDF2 Documentation](https://pypdf2.readthedocs.io/en/3.x/)
 
@@ -32,10 +33,11 @@ Research about Libraries,Packages and Frameworks used
 
 **Cons:**
 - **Not Plug-and-Play:** Requires writing custom code for extraction tasks.
+- Implementation of extraction of table data is very complex
 
 **Documentation:** [py_pdf_parser Documentation](https://py-pdf-parser.readthedocs.io/en/latest/overview.html)[5]
 
-### 3. LlamaParse
+### 3. LlamaParser
 
 **Features:**
 - **GenAI-Native:** Built for generative AI use cases.
@@ -44,12 +46,12 @@ Research about Libraries,Packages and Frameworks used
 - **Natural Language Instructions:** Can parse documents based on natural language instructions.
 
 **Pros:**
-- **High-Quality Parsing:** Ensures data quality before passing to downstream LLM use cases.
+- **High-Quality Parsing:** Ensures data quality .
 - **Versatile:** Supports multiple file formats and foreign languages.
 
 **Cons:**
 - **Pricing:** Free tier is limited, and additional pages require payment.
-- **Beta Stage:** Some features may still be in development or under testing.
+- LLM based, requires 3rd party API calls, not allowed to use for company's internal documents.
 
 **Documentation:** [LlamaParse Documentation](https://docs.cloud.llamaindex.ai/llamaparse/getting_started)[9]
 
@@ -67,7 +69,7 @@ Research about Libraries,Packages and Frameworks used
 - **Cross-Platform:** Works on Windows, Mac, and Linux.
 
 **Cons:**
-- **Complexity:** Can be complex for beginners due to its extensive feature set.
+- **Complexity:** Can be complex due to its extensive feature set.
 
 
 **Documentation:** [PyMuPDF Documentation](https://pymupdf.readthedocs.io/en/latest/intro.html)[11]
@@ -76,8 +78,7 @@ Research about Libraries,Packages and Frameworks used
 
 **Features:**
 - **Table Extraction:** Specializes in extracting tables from text-based PDFs.
-- **Export Options:** Can export tables to CSV, JSON, Excel, HTML, Markdown, and SQLite.
-- **Metrics:** Provides metrics like accuracy and whitespace to evaluate extraction quality.
+- **Export Options:** Can export tables to CSV, JSON and Markdown.
 
 **Pros:**
 - **Integration:** Tables are extracted into pandas DataFrames, making it easy to integrate with data analysis workflows.
