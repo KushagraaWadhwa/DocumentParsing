@@ -7,6 +7,8 @@ Acceptance Criteria:- The Acceptance criteria of the assigned task was having a 
 
 Constraints:- Extracting the exact order of the document, Maintaining the structure of the tables, Achieving a high document coverage rate
 
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 #Research about Libraries,Packages and Frameworks used
 
 ## Python Libraries specifically for PDF text Parsing
@@ -103,6 +105,8 @@ Constraints:- Extracting the exact order of the document, Maintaining the struct
 *Tables were not found to be extracted in a good format hence discarded as an option!
 
 **Documentation:** [Camelot Documentation](https://camelot-py.readthedocs.io/en/master/)[2]
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 #Dataset
 My current experimentation included three major policy documents of the organisation namely:-
 
@@ -117,15 +121,21 @@ My current experimentation included three major policy documents of the organisa
 -<img width="540" alt="Screenshot 2024-08-07 at 10 34 50 AM" src="https://github.com/user-attachments/assets/1f66a6a8-4a84-4d05-8d3b-abcd9d04cab4">
 
 **The above images are an output to a streamlit dashboard I built to analyse the pdf documents.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 #Workflow followed
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 #Summary
 The project aimed to implement a document parser in Python using pre-trained NLP models and libraries to convert unstructured internal policy documents into a structured format, extracting text, images, and tables while maintaining their original order. The chosen parser, integrating PyMuPDF and Camelot, was selected for its ability to provide image metadata, extract images, and efficiently read text and tables in the exact order they appear in the documents.Amongst the text parsing libraries PyMUPDF is the fastest and best amongst its competitors, LlamaParser has quite a lot exploraton but is not allowed to be used for company's internal documents, the best lbrary for parsing turned out to be Camelot; which can provide tables in three formats:- Markdown, CSV, JSON. The research phase evaluated various libraries, ultimately discarding some due to poor performance and not being able to help us achieve the results. The final solution was tested on three major policy documents, achieving the required document coverage rate of over 90%. A Streamlit dashboard was also developed to visualize the pdf documents about the corpus count, pages count, images count, tables count etc.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 #Limitations
 - Multillingual Parsing Capability of the parser
 - Duplication of the table content(May or may not affect the further usage of the documentation)
-  
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 #Next Steps
 - Integrating OCR to read the image content along with the display of image metadata
 - Adding Multillingual Capability to the parser
