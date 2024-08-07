@@ -1,15 +1,17 @@
 # DocumentParsing-DTDL
-Objective/Primary Focus:- Implementation of Doc Parser in Python using pre-trained NLP models/ libraries. Building an efficient code to completely parse the internal policy documents of the organisation, basically converting the unstructured source document to a structured format, extracting proper information, texts, images, proper structured tables.
 
-Purpose: Fine-tuning dataset and Department level Benchmark dataset preparation.
+**Objective/Primary Focus:-** Implementation of Doc Parser in Python using pre-trained NLP models/ libraries. Building an efficient code to completely parse the internal policy documents of the organisation, basically converting the unstructured source document to a structured format, extracting proper information, texts, images, proper structured tables.
 
-Acceptance Criteria:- The Acceptance criteria of the assigned task was having a document coverage greater than 90 percent.
+**Purpose:-** Fine-tuning dataset and Department level Benchmark dataset preparation.
 
-Constraints:- Extracting the exact order of the document, Maintaining the structure of the tables, Achieving a high document coverage rate
+**Acceptance Criteria:-** The Acceptance criteria of the assigned task was having a document coverage greater than 90 percent.
+
+**Constraints:-** Extracting the exact order of the document, Maintaining the structure of the tables, Achieving a high document coverage rate
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 # Research about Libraries,Packages and Frameworks used
+
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ## Python Libraries specifically for PDF text Parsing
@@ -42,7 +44,7 @@ Constraints:- Extracting the exact order of the document, Maintaining the struct
 
 *Excellent library to seggregate document, identify sections from the document such as <heading><subheading><content>. Faces issues if all the documents are not in a generalised format!
 
-**Documentation:** [py_pdf_parser Documentation](https://py-pdf-parser.readthedocs.io/en/latest/overview.html)[5]
+**Documentation:** [py_pdf_parser Documentation](https://py-pdf-parser.readthedocs.io/en/latest/overview.html/)
 
 ### 3. LlamaParser
 
@@ -60,7 +62,7 @@ Constraints:- Extracting the exact order of the document, Maintaining the struct
 - **Pricing:** Free tier is limited, and additional pages require payment.
 - LLM based, requires 3rd party API calls, not allowed to use for company's internal documents.
 
-**Documentation:** [LlamaParse Documentation](https://docs.cloud.llamaindex.ai/llamaparse/getting_started)[9]
+**Documentation:** [LlamaParse Documentation](https://docs.cloud.llamaindex.ai/llamaparse/getting_started/)
 
 ### 4. PyMuPDF
 
@@ -78,7 +80,7 @@ Constraints:- Extracting the exact order of the document, Maintaining the struct
 **Cons:**
 - **Complexity:** Can be complex due to its extensive feature set.
 
-**Documentation:** [PyMuPDF Documentation](https://pymupdf.readthedocs.io/en/latest/intro.html)[11]
+**Documentation:** [PyMuPDF Documentation](https://pymupdf.readthedocs.io/en/latest/intro.html/)
   
 ## Python Libraries specifically for Parsing,extracting and analysing the tables present in the PDF documents
 ### 5. Camelot
@@ -96,7 +98,7 @@ Constraints:- Extracting the exact order of the document, Maintaining the struct
 
 *The best library observed throughout the experimentation to analyse, parse, extract table data!
 
-**Documentation:** [Camelot Documentation](https://camelot-py.readthedocs.io/en/master/)[2]
+**Documentation:** [Camelot Documentation](https://camelot-py.readthedocs.io/en/master/)
 
 ### 6. Tabula
 
@@ -105,10 +107,12 @@ Constraints:- Extracting the exact order of the document, Maintaining the struct
 
 *Tables were not found to be extracted in a good format hence discarded as an option!
 
-**Documentation:** [Camelot Documentation](https://camelot-py.readthedocs.io/en/master/)[2]
+**Documentation:** [Tabula Documentation](https://tabula-py.readthedocs.io/en/latest/tabula.html/)
+
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-#Dataset
+# Dataset
+
 My current experimentation included three major policy documents of the organisation namely:-
 
 - Internal Mobility Guidelines ( policy1.pdf ): 2pages, 84kb 
@@ -128,17 +132,17 @@ My current experimentation included three major policy documents of the organisa
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-#Summary
+# Summary
 
 The project aimed to implement a document parser in Python using pre-trained NLP models and libraries to convert unstructured internal policy documents into a structured format, extracting text, images, and tables while maintaining their original order. The chosen parser, integrating PyMuPDF and Camelot, was selected for its ability to provide image metadata, extract images, and efficiently read text and tables in the exact order they appear in the documents.Amongst the text parsing libraries PyMUPDF is the fastest and best amongst its competitors, LlamaParser has quite a lot exploraton but is not allowed to be used for company's internal documents, the best lbrary for parsing turned out to be Camelot; which can provide tables in three formats:- Markdown, CSV, JSON. The research phase evaluated various libraries, ultimately discarding some due to poor performance and not being able to help us achieve the results. The final solution was tested on three major policy documents, achieving the required document coverage rate of over 90%. A Streamlit dashboard was also developed to visualize the pdf documents about the corpus count, pages count, images count, tables count etc.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-#Limitations
+# Limitations
 - Multillingual Parsing Capability of the parser
 - Duplication of the table content(May or may not affect the further usage of the documentation)
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-#Next Steps
+# Next Steps
 - Integrating OCR to read the image content along with the display of image metadata
 - Adding Multillingual Capability to the parser
 - Remove the duplicate parsing of tables
