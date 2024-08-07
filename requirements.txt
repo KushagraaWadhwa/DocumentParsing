@@ -12,6 +12,7 @@ matplotlib
 # dependencies for "LlamaParser"
 llama-parse
 python-dotenv
+nest_asyncio
 
 # dependencies for 'PyMUPDF"
 pymupdf
@@ -20,20 +21,23 @@ ghostscript
 # dependencies for 'Camelot"
 camelot-py
 
-#dependencies for "Tabula"
+# dependencies for "Tabula"
 tabula-py
 
-#some other dependencies
+# dependencies for document coverage metrics 
 sentence-transformers
 difflib
+nltk
+docx
+
+# some other dependencies
 pytesseract
 transformers
 torch
 spacy
+SentencePiece
 
+# necessary import for llama-parse implementation
+# import nest_asyncio
+# nest_asyncio.apply()
 
-
-/* necessary import for llama-parse implementation
-import nest_asyncio
-nest_asyncio.apply()
-*/
