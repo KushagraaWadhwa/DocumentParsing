@@ -93,9 +93,14 @@ Constraints:- Extracting the exact order of the document, Maintaining the struct
 #Dataset
 My current experimentation included three major policy documents of the organisation namely:-
 
--Internal Mobility Guidelines ( policy1.pdf ): 2pages, 84kb <img width="543" alt="Screenshot 2024-08-07 at 10 35 07 AM" src="https://github.com/user-attachments/assets/122e6f3d-a661-4f7b-934f-fcab97ab39be">
--Employee Performance Improvement Policy ( policy2.pdf ): 4pages, 273kb <img width="541" alt="Screenshot 2024-08-07 at 10 35 30 AM" src="https://github.com/user-attachments/assets/0f4b8035-0186-4456-aa57-bd9a247d5e23">
--Employee Handbook ( handbook.pdf ): 75pages,981kb <img width="540" alt="Screenshot 2024-08-07 at 10 34 50 AM" src="https://github.com/user-attachments/assets/1f66a6a8-4a84-4d05-8d3b-abcd9d04cab4">
+-Internal Mobility Guidelines ( policy1.pdf ): 2pages, 84kb 
+<img width="543" alt="Screenshot 2024-08-07 at 10 35 07 AM" src="https://github.com/user-attachments/assets/122e6f3d-a661-4f7b-934f-fcab97ab39be"> 
+
+-Employee Performance Improvement Policy ( policy2.pdf ): 4pages, 273kb 
+<img width="541" alt="Screenshot 2024-08-07 at 10 35 30 AM" src="https://github.com/user-attachments/assets/0f4b8035-0186-4456-aa57-bd9a247d5e23">
+
+-Employee Handbook ( handbook.pdf ): 75pages,981kb 
+<img width="540" alt="Screenshot 2024-08-07 at 10 34 50 AM" src="https://github.com/user-attachments/assets/1f66a6a8-4a84-4d05-8d3b-abcd9d04cab4">
 
 **The above images are an output to a streamlit dashboard I built to analyse the pdf documents.
 
