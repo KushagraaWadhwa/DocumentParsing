@@ -175,6 +175,11 @@ The project aimed to implement a document parser in Python using pre-trained NLP
 - Remove the duplicate parsing of tables
 - Tables in json format
 
+## Installation
+```bash
+pip install -r requirements.txt
+```
+
 
 
 
