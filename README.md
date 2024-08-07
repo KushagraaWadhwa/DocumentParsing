@@ -153,9 +153,23 @@ My current experimentation included three major policy documents of the organisa
 
 ```mermaid
 graph TD;
-    A[Step 1: Start] --> B[Step 2: Process Data];
-    B --> C[Step 3: Generate Output];
-    C --> D[Step 4: End];
+    A[Actor: Source Documents] -->|Various Libraries (Raw Text obtained)| B[Q/A Pair Generation];
+    A -->|Ground Truth Text| B;
+    B --> C[Native QA];
+    B --> D[T5 QA];
+    B --> E[GPT-4];
+    
+    subgraph Libraries Used
+        B1[pypdf2]
+        B2[py_pdf_parser]
+        B3[PyMuPDF]
+        B4[LLamaparser]
+    end
+    
+    B1 --> B
+    B2 --> B
+    B3 --> B
+    B4 --> B
 ```
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
