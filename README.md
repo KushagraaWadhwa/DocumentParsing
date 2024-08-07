@@ -6,6 +6,19 @@
 
 **Acceptance Criteria:-** The Acceptance criteria of the assigned task was having a document coverage greater than 90 percent.
 
+It consists of two evaluation metrics:-
+**~Difflib Similarity**( Check for word overlap, longest occurring continuous sequence of words)-Python inbuilt library
+**~Sentence BERT Similarity**( Checks for the overall semantic interpretation of dataset)-Hugging Face PreTrained model(''all-MiniLM-L6-v2')
+ 
+*--> The first sheet contains the coverage comparison between Raw Truth and Ground Truth of the various HR documents*
+ 
+The metrics have been computed between:-
+(i)Raw Truth and Ground Truth(Complete Corpus)
+(ii)Raw Truth and Ground Truth(Unique Corpus)
+(iii) Raw Truth v/s Raw Truth (Interlibrary coverage comparison)
+ 
+*--> The second sheet of this excel document contains the similarity metrics for the combined QA pairs set between Native QA and T-5 model based QA*
+
 **Constraints:-** Extracting the exact order of the document, Maintaining the structure of the tables, Achieving a high document coverage rate
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
