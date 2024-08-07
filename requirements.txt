@@ -1,0 +1,10 @@
+python-dotenv
+py_pdf_parser
+camelot
+pandas
+numpy
+matplolib
+shapely
+pyvornoi
+torch 
+transformers
