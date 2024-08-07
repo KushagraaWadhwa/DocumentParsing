@@ -151,6 +151,13 @@ My current experimentation included three major policy documents of the organisa
 
 # Workflow followed
 
+```mermaid
+graph TD;
+    A[Step 1: Start] --> B[Step 2: Process Data];
+    B --> C[Step 3: Generate Output];
+    C --> D[Step 4: End];
+```
+
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 # Summary
