@@ -9,7 +9,8 @@ Constraints:- Extracting the exact order of the document, Maintaining the struct
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-#Research about Libraries,Packages and Frameworks used
+# Research about Libraries,Packages and Frameworks used
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ## Python Libraries specifically for PDF text Parsing
 ### 1. PyPDF2
@@ -128,6 +129,7 @@ My current experimentation included three major policy documents of the organisa
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 #Summary
+
 The project aimed to implement a document parser in Python using pre-trained NLP models and libraries to convert unstructured internal policy documents into a structured format, extracting text, images, and tables while maintaining their original order. The chosen parser, integrating PyMuPDF and Camelot, was selected for its ability to provide image metadata, extract images, and efficiently read text and tables in the exact order they appear in the documents.Amongst the text parsing libraries PyMUPDF is the fastest and best amongst its competitors, LlamaParser has quite a lot exploraton but is not allowed to be used for company's internal documents, the best lbrary for parsing turned out to be Camelot; which can provide tables in three formats:- Markdown, CSV, JSON. The research phase evaluated various libraries, ultimately discarding some due to poor performance and not being able to help us achieve the results. The final solution was tested on three major policy documents, achieving the required document coverage rate of over 90%. A Streamlit dashboard was also developed to visualize the pdf documents about the corpus count, pages count, images count, tables count etc.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
