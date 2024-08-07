@@ -151,27 +151,7 @@ My current experimentation included three major policy documents of the organisa
 
 # Workflow followed
 
-```mermaid
-graph TD;
-    A[Actor: Source Documents] --> B[Various Libraries (Raw Text obtained)];
-    A --> C[Ground Truth Text];
-    B --> D[Q/A Pair Generation];
-    D --> E[Native QA];
-    D --> F[T5 QA];
-    D --> G[GPT-4];
-    
-    subgraph Libraries Used
-        B1[pypdf2]
-        B2[py_pdf_parser]
-        B3[PyMuPDF]
-        B4[LLamaparser]
-    end
-    
-    B1 --> B
-    B2 --> B
-    B3 --> B
-    B4 --> B
-```
+https://mermaid.js.org/syntax/flowchart.html
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
