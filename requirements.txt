@@ -1,10 +1,39 @@
-python-dotenv
+# dependencies for "PyPDF2"
+PyPDF2
+
+# dependencies for "py_pdf_parser"
 py_pdf_parser
-camelot
-pandas
-numpy
-matplolib
 shapely
-pyvornoi
-torch 
+pyvoronoi
+pandas
+wheel
+matplotlib
+
+# dependencies for "LlamaParser"
+llama-parse
+python-dotenv
+
+# dependencies for 'PyMUPDF"
+pymupdf
+ghostscript
+
+# dependencies for 'Camelot"
+camelot-py
+
+#dependencies for "Tabula"
+tabula-py
+
+#some other dependencies
+sentence-transformers
+difflib
+pytesseract
 transformers
+torch
+spacy
+
+
+
+/* necessary import for llama-parse implementation
+import nest_asyncio
+nest_asyncio.apply()
+*/
