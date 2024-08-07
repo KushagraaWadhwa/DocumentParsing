@@ -1,13 +1,15 @@
 # DocumentParsing-DTDL
-Objective:- Building an efficient code to completely parse the internal policy documents of the organisation, basically converting the unstructured source document to a structured format, extracting proper information, texts, images, proper structured tables.
+Objective/Primary Focus:- Implementation of Doc Parser in Python using pre-trained NLP models/ libraries. Building an efficient code to completely parse the internal policy documents of the organisation, basically converting the unstructured source document to a structured format, extracting proper information, texts, images, proper structured tables.
+
+Purpose: Fine-tuning dataset and Department level Benchmark dataset preparation.
 
 Acceptance Criteria:- The Acceptance criteria of the assigned task was having a document coverage greater than 90 percent.
 
 Constraints:- Extracting the exact order of the document, Maintaining the structure of the tables, Achieving a high document coverage rate
 
 #Research about Libraries,Packages and Frameworks used
-## Python Libraries for PDF Manipulation and Parsing
 
+## Python Libraries specifically for PDF text Parsing
 ### 1. PyPDF2
 - **Text Extraction:** Extracts text and other data from PDF files.
 
@@ -32,8 +34,10 @@ Constraints:- Extracting the exact order of the document, Maintaining the struct
 - **Flexibility:** Highly customizable for specific extraction needs.
 
 **Cons:**
-- **Not Plug-and-Play:** Requires writing custom code for extraction tasks.
+- **Not Plug-and-Play:** Requires writing custom code for extraction tasks.Some manual inputs are required regarding adding fonts
 - Implementation of extraction of table data is very complex
+
+*Excellent library to seggregate document, identify sections from the document such as <heading><subheading><content>. Faces issues if all the documents are not in a generalised format!
 
 **Documentation:** [py_pdf_parser Documentation](https://py-pdf-parser.readthedocs.io/en/latest/overview.html)[5]
 
@@ -71,9 +75,9 @@ Constraints:- Extracting the exact order of the document, Maintaining the struct
 **Cons:**
 - **Complexity:** Can be complex due to its extensive feature set.
 
-
 **Documentation:** [PyMuPDF Documentation](https://pymupdf.readthedocs.io/en/latest/intro.html)[11]
-
+  
+## Python Libraries specifically for Parsing,extracting and analysing the tables present in the PDF documents
 ### 5. Camelot
 
 **Features:**
@@ -87,24 +91,36 @@ Constraints:- Extracting the exact order of the document, Maintaining the struct
 - **Text-Based PDFs Only:** Does not work with scanned documents.
 - **Limited Scope:** Focused primarily on table extraction.
 
+*The best library observed throughout the experimentation to analyse, parse, extract table data!
+
 **Documentation:** [Camelot Documentation](https://camelot-py.readthedocs.io/en/master/)[2]
 
+### 6. Tabula
 
+**Features:**
+- **Table Extraction:** Specializes in extracting tables from text-based PDFs.
+
+*Tables were not found to be extracted in a good format hence discarded as an option!
+
+**Documentation:** [Camelot Documentation](https://camelot-py.readthedocs.io/en/master/)[2]
 #Dataset
 My current experimentation included three major policy documents of the organisation namely:-
 
 -Internal Mobility Guidelines ( policy1.pdf ): 2pages, 84kb 
-<img width="543" alt="Screenshot 2024-08-07 at 10 35 07 AM" src="https://github.com/user-attachments/assets/122e6f3d-a661-4f7b-934f-fcab97ab39be"> 
-
 -Employee Performance Improvement Policy ( policy2.pdf ): 4pages, 273kb 
-<img width="541" alt="Screenshot 2024-08-07 at 10 35 30 AM" src="https://github.com/user-attachments/assets/0f4b8035-0186-4456-aa57-bd9a247d5e23">
-
 -Employee Handbook ( handbook.pdf ): 75pages,981kb 
-<img width="540" alt="Screenshot 2024-08-07 at 10 34 50 AM" src="https://github.com/user-attachments/assets/1f66a6a8-4a84-4d05-8d3b-abcd9d04cab4">
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+-<img width="543" alt="Screenshot 2024-08-07 at 10 35 07 AM" src="https://github.com/user-attachments/assets/122e6f3d-a661-4f7b-934f-fcab97ab39be"> 
+-<img width="541" alt="Screenshot 2024-08-07 at 10 35 30 AM" src="https://github.com/user-attachments/assets/0f4b8035-0186-4456-aa57-bd9a247d5e23">
+-<img width="540" alt="Screenshot 2024-08-07 at 10 34 50 AM" src="https://github.com/user-attachments/assets/1f66a6a8-4a84-4d05-8d3b-abcd9d04cab4">
 **The above images are an output to a streamlit dashboard I built to analyse the pdf documents.
 
 #Workflow followed
+#Summary
+
+#Limitations
+#Next Steps
 
 
 
