@@ -24,8 +24,7 @@ Research about Libraries,Packages and Frameworks used
 ### 2. py_pdf_parser
 
 **Features:**.
-- **Custom Logic:** Allows for custom logic to locate and extract data.
-- **Visualization Tool:** Comes with a visualization tool to examine PDF elements.
+- **Custom Logic:** Allows for custom logic to locate and extract data.For example:- Can help extract data based on the font style of the content present in the pdf
 
 **Pros:**
 - **Structured Data Extraction:** Ideal for extracting structured data from complex PDFs.
@@ -33,7 +32,6 @@ Research about Libraries,Packages and Frameworks used
 
 **Cons:**
 - **Not Plug-and-Play:** Requires writing custom code for extraction tasks.
-- **Limited Text Extraction:** Not designed for simple text extraction tasks.
 
 **Documentation:** [py_pdf_parser Documentation](https://py-pdf-parser.readthedocs.io/en/latest/overview.html)[5]
 
@@ -70,7 +68,7 @@ Research about Libraries,Packages and Frameworks used
 
 **Cons:**
 - **Complexity:** Can be complex for beginners due to its extensive feature set.
-- **Licensing:** Dual licensing model (AGPL and commercial).
+
 
 **Documentation:** [PyMuPDF Documentation](https://pymupdf.readthedocs.io/en/latest/intro.html)[11]
 
@@ -82,7 +80,6 @@ Research about Libraries,Packages and Frameworks used
 - **Metrics:** Provides metrics like accuracy and whitespace to evaluate extraction quality.
 
 **Pros:**
-- **Ease of Use:** Simple API for extracting tables.
 - **Integration:** Tables are extracted into pandas DataFrames, making it easy to integrate with data analysis workflows.
 
 **Cons:**
@@ -91,21 +88,5 @@ Research about Libraries,Packages and Frameworks used
 
 **Documentation:** [Camelot Documentation](https://camelot-py.readthedocs.io/en/master/)[2]
 
-These libraries offer a range of functionalities for working with PDFs in Python, each with its own strengths and limitations. Depending on your specific needs, you can choose the library that best fits your use case.
 
-Citations:
-[1] https://pypdf2.readthedocs.io/en/3.x/
-[2] https://camelot-py.readthedocs.io/en/master/
-[3] https://nanonets.com/blog/pypdf2-library-working-with-pdf-files-in-python/
-[4] https://www.reddit.com/r/learnpython/comments/117cekd/pypdf_vs_pypdf2_vs_pypdf3_vs_pypdf4_vs_others/
-[5] https://py-pdf-parser.readthedocs.io/en/latest/overview.html
-[6] https://pypi.org/project/py-pdf-parser/
-[7] https://www.datacamp.com/tutorial/run-llama-3-locally
-[8] https://docs.llamaindex.ai/en/stable/llama_cloud/llama_parse/
-[9] https://docs.cloud.llamaindex.ai/llamaparse/getting_started
-[10] https://pymupdf.readthedocs.io/en/latest/tutorial.html
-[11] https://pymupdf.readthedocs.io/en/latest/intro.html
-[12] https://camelot-py.readthedocs.io/_/downloads/en/stable/pdf/
-[13] https://pypi.org/project/camelot-py/0.2.2/
-[14] https://pypi.org/project/PyPDF2/1.25/
-[15] https://pymupdf.readthedocs.io/en/latest/
+
