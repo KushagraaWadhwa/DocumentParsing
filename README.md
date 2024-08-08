@@ -152,7 +152,22 @@ My current experimentation included three major policy documents of the organisa
 
 # Workflow followed
 
-https://mermaid.js.org/syntax/flowchart.html
+graph TD
+    A[Source_Docs] --> B[Problem Identification]
+    B --> B1[Identify Tables]
+    B --> B2[Analyze PDF Structure]
+    B --> B3[High Document Coverage %]
+    B1 --> C1[Look for libraries that identify tables efficiently]
+    C1 --> D1[Camelot]
+    B2 --> C2[Look for libraries that read text properly]
+    C2 --> D2[PyPDF2]
+    C2 --> D3[py_pdf_parser]
+    C2 --> D4[PyMuPDF]
+    D1 --> E[Integrate the best text parsing library with the best table parsing library]
+    D2 --> E
+    D3 --> E
+    D4 --> E
+    E --> F[PyMuPDF + Camelot]
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
