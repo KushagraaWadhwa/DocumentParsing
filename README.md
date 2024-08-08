@@ -152,6 +152,7 @@ My current experimentation included three major policy documents of the organisa
 
 # Workflow followed
 
+```mermaid
 graph TD
     A[Source_Docs] --> B[Problem Identification]
     B --> B1[Identify Tables]
@@ -168,6 +169,8 @@ graph TD
     D3 --> E
     D4 --> E
     E --> F[PyMuPDF + Camelot]
+
+```
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
