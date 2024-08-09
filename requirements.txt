@@ -1,3 +1,5 @@
+#All experimentations done on python 3.9.6
+
 # dependencies for "PyPDF2"
 PyPDF2
 
@@ -19,23 +21,29 @@ pymupdf
 ghostscript
 
 # dependencies for 'Camelot"
-camelot-py
+camelot-py[base]
+opencv-python
+opencv-contrib-python
+opencv-python-headless
+opencv-contrib-python-headless
 
 # dependencies for "Tabula"
 tabula-py
 
 # dependencies for document coverage metrics 
 sentence-transformers
-difflib
 nltk
 docx
 
 # some other dependencies
 pytesseract
+opencv-python
+opencv-python-headless
 transformers
 torch
 spacy
 SentencePiece
+accelerate
 
 # necessary import for llama-parse implementation
 # import nest_asyncio

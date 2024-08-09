@@ -1,11 +1,9 @@
-# text_extractor.py
 import PyPDF2
 from py_pdf_parser.loaders import load_file
 import json
 import re
 import fitz
-from llama_parse import LlamaParse
-
+import os
 
 class TextExtractor:
     def __init__(self):
@@ -22,25 +20,18 @@ class TextExtractor:
         return text
 
     def parse_pdf_using_py_pdf_parser(self, pdf_path):
-        # Load the PDF document
         document = load_file(pdf_path)
-
-        # Checking the fonts
-        all_elements = document.elements
-        # Define font categories
         title_font = []
         subheading_font = []
         nested_subheading_font = []
         content_font = []
         ignored_font = []
 
-        # Initialize data structures
         data = {}
         title_policy = []
         current_subheading = None
         current_nested_subheading = None
 
-        # Iterate through elements in the document
         for element in document.elements:
             try:
                 if element.font in ignored_font:
@@ -63,7 +54,6 @@ class TextExtractor:
             except Exception as e:
                 print(f"Skipping element due to exception: {str(e)}")
 
-        # Prepare the output data
         output_data = {
             "title_policy": title_policy,
             "content": data
@@ -91,17 +81,6 @@ class TextExtractor:
 
         return result
 
-    def parse_pdf_using_llama(self, pdf_path):
-        documents = LlamaParse(result_type="markdown", do_not_unroll_columns=True,
-                               parsing_instruction="This is a company policy document. I want accurate and exact details about each heading or subheading, do not generate content on your own.").load_data(pdf_path)
-
-        markdown_text = ""
-        for i in range(len(documents)):
-            markdown_text += documents[i].text + '\n'
-
-        parsed_dict = self.parse_markdown_to_dict(markdown_text)
-        return parsed_dict
-
     def parse_pdf_using_pymupdf(self, pdf_path):
         doc = fitz.open(pdf_path)
         text = ""
@@ -109,17 +88,31 @@ class TextExtractor:
             output = page.get_text("blocks")
             previous_block_id = 0
             for block in output:
-                if block[6] == 0:  # We only take the text
+                if block[6] == 0:
                     if previous_block_id != block[5]:
                         text += "\n"
                     text += block[4] + "\n"
                     previous_block_id = block[5]
         return text
 
+    def save_output_to_file(self, output, method_name):
+        # Ensure the output directory exists
+        output_dir = os.path.dirname(method_name)
+        if not os.path.exists(output_dir):
+            os.makedirs(output_dir)
+
+        with open(f"{method_name}.txt", "w") as file:
+            if isinstance(output, dict):
+                file.write(json.dumps(output, indent=4))
+            else:
+                file.write(output)
 
 # Example usage:
 # extractor = TextExtractor()
-# extracted_text = extractor.extract_text_from_pdf('/path/to/pdf_file.pdf')
-# parsed_data = extractor.parse_pdf_using_py_pdf_parser('/path/to/pdf_file.pdf')
-# llama_parsed_data = extractor.parse_pdf_using_llama('/path/to/pdf_file.pdf')
-# pymupdf_text = extractor.extract_text_from_pdf_using_pymupdf('/path/to/pdf_file.pdf')
+# extracted_text_pypdf2 = extractor.parse_pdf_using_PyPDF2('/path/to/your/pdf')
+# parsed_data_pypdfparser = extractor.parse_pdf_using_py_pdf_parser('/path/to/your/pdf')
+# extracted_text_pymupdf = extractor.parse_pdf_using_pymupdf('/path/to/your/pdf')
+
+# extractor.save_output_to_file(extracted_text_pypdf2, "output/parse_pdf_using_PyPDF2")
+# extractor.save_output_to_file(parsed_data_pypdfparser, "output/parse_pdf_using_py_pdf_parser")
+# extractor.save_output_to_file(extracted_text_pymupdf, "output/parse_pdf_using_pymupdf")

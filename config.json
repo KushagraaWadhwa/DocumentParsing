@@ -1,0 +1,10 @@
+{
+    "extractor": {
+      "library": "PyMUCamelot",
+      "class": "PyMUCamelot_Extractor",
+      "method": "process_pdf"
+    },
+    "pdf_path": "/Users/kushagrawadhwa/Downloads/DocumentParsing-DTDL-main/source_docs/policy1.pdf",
+    "output_image_dir": "/Users/kushagrawadhwa/Downloads/DocumentParsing-DTDL-main/extracted_images",
+    "output_folder":"/Users/kushagrawadhwa/Downloads/DocumentParsing-DTDL-main/output"
+  }

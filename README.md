@@ -4,7 +4,7 @@
 
 **Purpose:-** Fine-tuning dataset and Department level Benchmark dataset preparation.
 
-**Acceptance Criteria:-** The Acceptance criteria of the assigned task was having a document coverage greater than 90 percent.
+**Acceptance Criteria:-** The Acceptance criteria of the assigned task was the document coverage .
 
 It consists of two evaluation metrics:-
 
@@ -14,6 +14,8 @@ It consists of two evaluation metrics:-
 
 **~Sentence BERT Similarity**(Checks for the overall semantic interpretation of dataset)-Hugging Face PreTrained model(''all-MiniLM-L6-v2')        
 [Sentence-BertDocumentation](https://sbert.net/docs/sentence_transformer/usage/semantic_textual_similarity.html)
+
+The excel sheet regarding the document coverage metrics is present in the directory and located at "/Users/kushagrawadhwa/Downloads/DocumentParsing-DTDL-main/document_coverage/Doc_coverage metrics.xlsx"
  
 *--> The first sheet contains the coverage comparison between Raw Truth and Ground Truth of the various HR documents*
  
@@ -24,6 +26,8 @@ The metrics have been computed between:-
 - (iii) Raw Truth v/s Raw Truth (Interlibrary coverage comparison)
  
 *--> The second sheet of this excel document contains the similarity metrics for the combined QA pairs set between Native QA and T-5 model based QA*
+
+**The major drop in scores of the document coverage is due to the absence of header and footer,some miscellaneous characters, or some duplicacy of tables/content.
 
 **Constraints:-** Extracting the exact order of the document, Maintaining the structure of the tables, Achieving a high document coverage rate
 
@@ -152,12 +156,13 @@ My current experimentation included three major policy documents of the organisa
 
 # Workflow followed
 
+
 ```mermaid
 graph TD
-    A[Source_Docs] --> B[Problem Identification]
-    B --> B1[Identify Tables]
-    B --> B2[Analyze PDF Structure]
-    B --> B3[High Document Coverage %]
+    A[Source_Documents] --> B[Problem Identification]
+    B --> B1[Identify Tables in structured format]
+    B --> B2[Extract the PDF Structure as it is]
+    B --> B3[Highly Accurate Document Coverage %]
     B1 --> C1[Look for libraries that identify tables efficiently]
     C1 --> D1[Camelot]
     B2 --> C2[Look for libraries that read text properly]
@@ -176,10 +181,11 @@ graph TD
 
 # Summary
 
-The project aimed to implement a document parser in Python using pre-trained NLP models and libraries to convert unstructured internal policy documents into a structured format, extracting text, images, and tables while maintaining their original order. The chosen parser, integrating PyMuPDF and Camelot, was selected for its ability to provide image metadata, extract images, and efficiently read text and tables in the exact order they appear in the documents.Amongst the text parsing libraries PyMUPDF is the fastest and best amongst its competitors, LlamaParser has quite a lot exploraton but is not allowed to be used for company's internal documents, the best lbrary for parsing turned out to be Camelot; which can provide tables in three formats:- Markdown, CSV, JSON. The research phase evaluated various libraries, ultimately discarding some due to poor performance and not being able to help us achieve the results. The final solution was tested on three major policy documents, achieving the required document coverage rate of over 90%. A Streamlit dashboard was also developed to visualize the pdf documents about the corpus count, pages count, images count, tables count etc.
+The project aimed to implement a document parser in Python using pre-trained NLP models and libraries to convert unstructured internal policy documents into a structured format, extracting text, images, and tables while maintaining their original order. The chosen parser, integrating PyMuPDF and Camelot, was selected for its ability to provide image metadata, extract images, and efficiently read text and tables in the exact order they appear in the documents.Amongst the text parsing libraries PyMUPDF is the fastest and best amongst its competitors, LlamaParser has quite a lot exploraton but is not allowed to be used for company's internal documents, the best lbrary for parsing tables turned out to be Camelot; which can provide tables in three formats:- Markdown, CSV, JSON. The research phase evaluated various libraries, ultimately discarding some due to poor performance and not being able to help us achieve the results. The final solution was tested on three major policy documents and their document coverage has been computed and stored in the directory itself. A Streamlit dashboard was also developed to visualize the pdf documents about the corpus count, pages count, images count, tables count etc.
+
+As a final conclusion, The best parser identifying the text and the tables and various other elements of the PDF file is concluded to be (PyMUPDF+Camelot). Some improvements are possible in this parser, which have been listed below under the heading "Next Steps"
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
 # Limitations
 
 - Multillingual Parsing Capability of the parser
@@ -194,6 +200,9 @@ The project aimed to implement a document parser in Python using pre-trained NLP
 - Tables in json format
 
 ## Installation
+
+- Create a python venv
+- Preferred version of python=3.9.6
 ```bash
 pip install -r requirements.txt
 ```
